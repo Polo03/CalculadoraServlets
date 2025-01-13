@@ -55,8 +55,10 @@ public class Calculadora extends HttpServlet {
         return num1 * num2;
     }
 
-    public static Integer division(Integer num1, Integer num2) {
-        return num1 / num2;
+    public static Double division(Integer num1, Integer num2) {
+        Double numero1=Double.parseDouble(num1.toString());
+        Double numero2=Double.parseDouble(num2.toString());
+        return numero1 / numero2;
     }
 
     public void destroy() {
