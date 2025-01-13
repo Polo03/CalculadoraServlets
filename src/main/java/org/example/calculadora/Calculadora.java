@@ -20,6 +20,7 @@ public class Calculadora extends HttpServlet {
         // Recoger datos del formulario
         Integer num1 = request.getParameter("num1") != "" ? Integer.valueOf(request.getParameter("num1")) : null;
         Integer num2 = request.getParameter("num2") != "" ? Integer.valueOf(request.getParameter("num2")) : null;
+
         String operador = request.getParameter("operador");
 
         // Enviar respuesta al cliente
@@ -35,6 +36,8 @@ public class Calculadora extends HttpServlet {
                 response.getWriter().print(multiplicacion(num1, num2));
                 break;
             case "/":
+                assert num1 != null;
+                assert num2 != null;
                 response.getWriter().print(division(num1, num2));
                 break;
             default:
