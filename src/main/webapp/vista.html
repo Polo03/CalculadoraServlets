@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Básica</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .calculator {
+            display: inline-block;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        input {
+            margin: 5px;
+            padding: 10px;
+            width: 50px;
+            text-align: center;
+        }
+        #calcular {
+            margin: 10px;
+            padding: 10px 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            width: 75px;
+        }
+        #calcular:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+<div class="calculator">
+    <h1>Calculadora Básica</h1>
+    <form action="http://localhost:8080/Calculadora_war_exploded/calculadora" method="get">
+        <input type="number" id="num1" name="num1" placeholder="Número 1">
+        <select id="operador" name="operador" required>
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+        <input type="number" id="num2" name="num2" placeholder="Número 2">
+        <input type="submit" id="calcular" name="Calcular"></input>
+    </form>
+    <h2 id="result">Resultado: </h2>
+</div>
+</body>
+</html>
