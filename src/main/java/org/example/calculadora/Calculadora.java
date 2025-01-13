@@ -26,16 +26,16 @@ public class Calculadora extends HttpServlet {
         response.setContentType("text/html");
         switch (operador){
             case "+":
-                suma(num1, num2);
+                response.getWriter().print(suma(num1, num2));
                 break;
             case "-":
-                resta(num1, num2);
+                response.getWriter().print(resta(num1, num2));
                 break;
             case "*":
-                multiplicacion(num1, num2);
+                response.getWriter().print(multiplicacion(num1, num2));
                 break;
             case "/":
-                division(num1, num2);
+                response.getWriter().print(division(num1, num2));
                 break;
             default:
                 response.getWriter().print("No va");
